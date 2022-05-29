@@ -27,6 +27,9 @@ const CharactersInfo = () => {
                 <img src={`https://starwars-visualguide.com/assets/img/characters/${people}.jpg`} alt="people"  />
             </div>
             <div className="col-5">
+                <div className="nav-link">
+                    <Link className="nav-next" to={`/characters/${ +people +1 }`}>Next > </Link>
+                </div>
                 <h2 className="info-title">
                     {characters.title}
                 </h2>
@@ -38,6 +41,7 @@ const CharactersInfo = () => {
                     <li className="info-desc">Hair color : <span>{characters.hair_color}</span></li>
                     <li className="info-desc">Skin color : <span>{characters.skin_color}</span></li>
                 </ul>
+                <Link className="nav-back" to={`/characters/${ +people - 1 }`} > Back  </Link>
             </div>
         </div>
 

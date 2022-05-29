@@ -27,6 +27,7 @@ const SpeciesInfo = () => {
                 <img src={`https://starwars-visualguide.com/assets/img/species/${item}.jpg`} alt="species" className="info-img" />
             </div>
             <div className="col-5">
+
                 <h2 className="info-title" >
                     {species.title}
                 </h2>
@@ -39,6 +40,7 @@ const SpeciesInfo = () => {
                     <li className="info-desc">Hair colors : <span>{species.hair_colors}</span></li>
                     <li className="info-desc">Skin colors : <span>{species.skin_colors}</span></li>
                     <li className="info-desc">Eye colors :<span>{species.eye_colors}</span></li>
+
                 </ul>
             </div>
         </div>

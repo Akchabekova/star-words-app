@@ -27,6 +27,9 @@ const VehiclesInfo = () => {
                 <img src={`https://starwars-visualguide.com/assets/img/vehicles/${item}.jpg`} alt="vehicles" className="info-img" />
             </div>
             <div className="col-5">
+                <div className="nav-link">
+                    <Link className="nav-next" to={`/vehicles/${ +item +1 }`}>Next > </Link>
+                </div>
                 <h2 className="info-title" >
                     {vehicles.title}
                 </h2>
@@ -40,6 +43,7 @@ const VehiclesInfo = () => {
                     <li className="info-desc">Cargo Capacity:<span>{vehicles.cargo_capacity}</span></li>
                     <li className="info-desc">Mimimum Crew:<span>{vehicles.crew}</span></li>
                     <li className="info-desc">Passengers:<span>{vehicles.passengers}</span></li>
+                    <Link className="nav-back" to={`/vehicles/${ +item - 1 }`} > Back  </Link>
                 </ul>
             </div>
         </div>

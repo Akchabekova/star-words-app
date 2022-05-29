@@ -8,6 +8,11 @@ body{
     font-family: 'Quicksand', sans-serif;
     background-color: black;
     color: white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+
 }
 .logo{
     margin-bottom: 20px;
@@ -19,6 +24,7 @@ body{
     margin: 0 auto;
     padding: 0 15px;
     position: relative;
+
 }
 
 .row{
@@ -52,7 +58,7 @@ body{
     list-style: none;
 }
 .element-img{
-    max-width: 170px;
+    max-width: 150px;
 
 }
 
@@ -72,15 +78,18 @@ body{
 }
 .element-caption {
     text-align: center;
-    background-color: white;
+
     color: black;
     border-radius: 2px;
     font-size: 20px;
     font-weight: 400;
     padding: 5px;
-    text-transform: none;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: silver;
 
 }
+
 
 .category-item{
     position: relative;
@@ -89,15 +98,15 @@ body{
 .category-desc{
     color: white;
     text-decoration: none;
-    font-size: 28px;
+    font-size: 30px;
     text-transform: uppercase;
     position: absolute;
     left: 80px;
     bottom: 30px;
 
-
-
-
+}
+.category-desc span{
+    color: #ea6d6d;
 }
 .pagination-btn{
     color: white;
@@ -135,3 +144,48 @@ body{
 .info-img{
     max-width: 100%;
 }
+
+.nav-link{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+
+}
+
+.nav-next{
+    color: white;
+    text-decoration: none;
+    background-color: #2a94b0;
+    padding: 8px 5px;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+
+
+}
+.nav-back{
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    background-color: #2a94b0;
+    padding: 8px 5px;
+    font-size: 20px;
+    display:  flex;
+    justify-content: center;
+    align-items: end;
+    border-radius: 2px;
+
+
+
+
+}
+
+
+canvas {
+    opacity: 0.5;
+     z-index: 2;
+
+}
+
+

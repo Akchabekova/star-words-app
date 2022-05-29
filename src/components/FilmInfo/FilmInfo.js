@@ -4,6 +4,7 @@ import axios from "axios";
 import Spinner from "../Spinner";
 
 
+
 const FilmInfo = () => {
     const {episode} = useParams()
     const [film, setFilm] = useState({})
@@ -15,7 +16,7 @@ const FilmInfo = () => {
                 setIsLoading(false)
 
             })
-    },[])
+    },[episode])
 
     if(isLoading){
         return <Spinner />
@@ -27,6 +28,9 @@ const FilmInfo = () => {
                 <img src={`https://starwars-visualguide.com/assets/img/films/${episode}.jpg`} alt="episode"  />
             </div>
         <div className="col-5">
+            <div className="nav-link">
+                <Link className="nav-next" to={`/films/${ +episode +1 }`}>Next > </Link>
+            </div>
             <h2 className="info-title">
                 {film.title}
             </h2>
@@ -34,8 +38,10 @@ const FilmInfo = () => {
             <h4 className="info-desc">Director: <span> {film.director}</span></h4>
             <h4 className="info-desc">Producer(s): <span>{film.producer}</span></h4>
             <h4 className="info-desc">Opening Crawl:<span> {film.opening_crawl}</span></h4>
+            <Link className="nav-back" to={`/films/${ +episode - 1 }`} > Back  </Link>
         </div>
         </div>
+
 
     );
 };

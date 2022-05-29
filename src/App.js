@@ -18,17 +18,14 @@ import SpeciesInfo from "./components/SpeciesInfo";
 import VehiclesInfo from "./components/VehiclesInfo";
 import PlanetsInfo from "./components/PlanetsInfo";
 
-
-
-
 const App = () => {
-  return (
+    return (
      <BrowserRouter>
          <div className="container">
              <Header />
-           <Routes>
+             <Routes>
                <Route path ="/" element ={<HomePage/>} />
-               <Route path ="/characters" element ={<Characters />} />
+                 <Route path ="/characters" element ={<Characters />} />
                <Route path ="/characters/:people" element ={<CharactersInfo />} />
                <Route path ="/films" element ={<Films />} />
                <Route path ="/films/:episode" element ={<FilmInfo/>} />

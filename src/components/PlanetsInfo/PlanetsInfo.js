@@ -27,6 +27,9 @@ const PlanetsInfo = () => {
                 <img src={`https://starwars-visualguide.com/assets/img/planets/${item}.jpg`} alt="planets" className="info-img" />
             </div>
             <div className="col-5">
+                <div className="nav-link">
+                    <Link className="nav-next" to={`/plaanets/${ +item +1 }`}>Next > </Link>
+                </div>
                 <h2 className="info-title" >
                     {planets.title}
                 </h2>
@@ -39,6 +42,7 @@ const PlanetsInfo = () => {
                     <li className="info-desc">Terrain:<span>{planets.terrain}</span></li>
                     <li className="info-desc">Surface Water:<span>{planets.surface_water}</span></li>
                     <li className="info-desc">Climate:<span>{planets.climate}</span></li>
+                    <Link className="nav-back" to={`/planets/${ +item - 1 }`} > Back  </Link>
 
                 </ul>
             </div>

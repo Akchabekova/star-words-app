@@ -7,6 +7,7 @@ import starship from "../../assets/images/starships.jpg"
 import vehicles from "../../assets/images/vehicles.jpg"
 import planets from "../../assets/images/planets.jpg"
 import {Link} from "react-router-dom";
+import Background from "../Background";
 
 const HomePage = () => {
     return (
@@ -15,7 +16,7 @@ const HomePage = () => {
           <Link to = "/characters">
               <div className="category-item">
                   <img src={characters} alt="" />
-                  <h5 className="category-desc">Characters</h5>
+                  <h5 className="category-desc"><span>Characters</span></h5>
               </div>
           </Link>
            </div>
@@ -31,7 +32,7 @@ const HomePage = () => {
               <Link to="/species">
                   <div className="category-item">
                       <img src={species} alt="" />
-                      <h5 className="category-desc">Species</h5>
+                      <h5 className="category-desc"><span>Species</span></h5>
                   </div>
               </Link>
            </div>
@@ -47,7 +48,7 @@ const HomePage = () => {
              <Link to="/vehicles">
                  <div className="category-item">
                      <img src={vehicles} alt="" />
-                     <h5 className="category-desc">Vechicles</h5>
+                     <h5 className="category-desc"><span>Vechicles</span></h5>
                  </div>
              </Link>
            </div>

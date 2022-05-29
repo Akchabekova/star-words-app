@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import Spinner from "../Spinner";
 
 
+
 const Characters = () => {
     const [characters,setCharacters] = useState({})
     const[page,setPage]=useState(0)
@@ -33,7 +34,7 @@ const Characters = () => {
               <div className="element-item">
                   <div className="element-title">
                   <img src={`https://starwars-visualguide.com/assets/img/characters/${ 10 * page + index +1 }.jpg`} alt="person" className="element-img" />
-                  <h2 className="element-caption">{people.name}</h2>
+                  <h2 className="element-caption" >{people.name}</h2>
                   </div>
                   <div className="element-desc">
                   </div>
@@ -48,5 +49,6 @@ const Characters = () => {
         </div>
     );
 };
+
 
 export default Characters;
